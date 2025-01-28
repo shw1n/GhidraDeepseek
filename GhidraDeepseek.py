@@ -1,22 +1,16 @@
-# Ghidra plugin that asks OpenAI Chat GPT (https://chat.openai.com/chat) to explain functions (OpenAI's GPT-4).
-# @author evyatar9 (https://github.com/evyatar9)
-# @category API
-# @keybinding Ctrl-Alt-G
-# @menupath Tools.GptHidra
-# @toolbar
+# Forked from GptHidra
 
 import urllib2
 import json
 from ghidra.util.task import TaskMonitor
 from ghidra.app.decompiler import DecompInterface
 
-# https://help.openai.com/en/articles/7102672-how-can-i-access-gpt-4
-# Get your API key from https://beta.openai.com/account/api-keys
+# Get your API key from https://api.deepseek.com and add it in here when you create your script
 API_KEY = ''
 
 def explainFunction(c_code):
     """
-        Calls the OpenAI Chat GPT API to explain the given code.
+        Calls the Deepseek API to explain the given code.
 
         Args:
             c_code (str): The code to be explained.
@@ -24,8 +18,11 @@ def explainFunction(c_code):
         Returns:
             str: The explanation provided by the API.
     """
-    url = 'https://api.openai.com/v1/chat/completions'
-    data = {"messages":[ {"role": "user","content":"Explain code:\n" + c_code} ], "model": "gpt-4"}
+    url = 'https://api.deepseek.com/v1/chat/completions'
+    data = {"messages":[ {"role": "user","content":"Explain code:\n" + c_code} ], "model": "deepseek-reasoner"}
+
+    # Use this is you want to use deepseek chat
+    #data = {"messages":[ {"role": "user","content":"Explain code:\n" + c_code} ], "model": "deepseek-chat"}
     data = json.dumps(data)
 
     req = urllib2.Request(url, data,
