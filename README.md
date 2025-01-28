@@ -1,6 +1,6 @@
-# GptDeepseek
+# GhidraDeepseek
 
-GptDeepseek is a Ghidra plugin forked from GptHidra that uses the [Deepseek](https://api.deepseek.com/) to explain functions. With GptDeepseek, you can easily understand the purpose and behavior of functions in your codebase.
+GhidraDeepseek is a Ghidra plugin forked from GptHidra that uses the [Deepseek](https://api.deepseek.com/) to explain functions. With GhidraDeepseek, you can easily understand the purpose and behavior of functions in your codebase.
 
 ![example.gif](images/example.gif)
 
@@ -14,7 +14,7 @@ Self-explanatory
 
 ## Installation
 
-1. Download the GptDeepseek script
+1. Download the GhidraDeepseek script
 2. Open the Ghidra Script Manager (found in the `Tools` menu).
 3. Click the `New` button to create a new script.
 4. Select `Python` as the language and give the script the name `GptHidra.py`.
@@ -24,7 +24,7 @@ Self-explanatory
 
 ## Usage
 
-To use GptDeepseek, select a function in the Ghidra decompiler and do one of the following:
+To use GhidraDeepseek, select a function in the Ghidra decompiler and do one of the following:
 
 1. Press `Ctrl + Alt + G` (you can edit the script to change this shortcut).
 
