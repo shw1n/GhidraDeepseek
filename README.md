@@ -40,12 +40,4 @@ An explanation of the selected function will be printed to the Ghidra console.
 
 
 
-## Support
-You can support my work buying me a coffee:
-
 Check out the original GptHidra
-
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/evyatar9/GptHidra.svg)](https://starchart.cc/evyatar9/GptHidra)
